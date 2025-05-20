@@ -102,6 +102,10 @@
           if(valor === '+' || valor === '-' || valor === '*' || valor === '/' ||valor === '.'){
             document.getElementById('resultado').value += valor
           }
+          if(valor === '='){
+            var visor = eval(document.getElementById('resultado').value)
+            document.getElementById('resultado').value = visor
+          }
         } else if(tipo === 'valor'){
           document.getElementById('resultado').value += valor
         }
